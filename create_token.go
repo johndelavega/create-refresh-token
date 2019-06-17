@@ -20,6 +20,8 @@ func createRefreshToken(config *oauth2.Config, tokenFile string) error {
 		return saveToken(tokenFile, tok, map1)
 	}
 
+	fmt.Printf("Token file \"%s\" already exists.\n", tokenFile)
+
 	return nil
 }
 

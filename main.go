@@ -22,6 +22,9 @@ import (
 // default json filename created from google console credentials "Download JSON"
 // client_secret_000000000000-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.apps.googleusercontent.com.json
 
+// When running the app, use the same google account
+// that created the OAuth 2.0 client IDs.
+
 // sample output refresh token json file content
 // https://github.com/firebase/firebase-admin-go/blob/master/testdata/refresh_token.json
 // {
@@ -73,6 +76,6 @@ func main() {
 
 	client := config.Client(context.Background(), tok)
 
-	fmt.Printf("client = %v\n", client)
+	fmt.Printf("Test created or existing token file, *http.Client = %v\n", client)
 
 }

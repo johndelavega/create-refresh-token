@@ -49,7 +49,8 @@ func main() {
 		log.Fatalf("Unable to read client secret file: %v", err)
 	}
 
-	scopes := []string{"https://www.googleapis.com/auth/userinfo.email",
+	scopes := []string{
+		"https://www.googleapis.com/auth/userinfo.email",
 		"https://www.googleapis.com/auth/firebase.database"}
 
 	config, err := google.ConfigFromJSON(b, scopes...)

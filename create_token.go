@@ -32,8 +32,8 @@ func getTokenFromWeb(config *oauth2.Config) (*oauth2.Token, map[string]string) {
 
 	authURL := config.AuthCodeURL("state-token", oauth2.AccessTypeOffline)
 
-	fmt.Printf("Go to the following link in your browser then type the "+
-		"authorization code: \n%v\n", authURL)
+	fmt.Printf("Go to the following link, copy & paste into your browser, then copy from your browser the "+
+		"authorization code: \n\n%v\n\nPaste authorization code here:\n", authURL)
 
 	var authCode string
 	if _, err := fmt.Scan(&authCode); err != nil {

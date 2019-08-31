@@ -22,8 +22,8 @@ import (
 // default json filename created from google console credentials "Download JSON"
 // client_secret_000000000000-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.apps.googleusercontent.com.json
 
-// When running the app, use the same google account
-// that created the OAuth 2.0 client IDs.
+// When running the app, use the same google account that created the OAuth 2.0 client IDs.
+// or any authorized admin user for the specific project.
 
 // sample output refresh token json file content
 // https://github.com/firebase/firebase-admin-go/blob/master/testdata/refresh_token.json
@@ -33,6 +33,10 @@ import (
 //     "client_secret": "aaaaaaaaaaaaaaaaaaaaaaaa",
 //     "refresh_token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 // }
+
+// To revoke a refresh_token using curl:
+// curl -H "Content-type:application/x-www-form-urlencoded" \
+//         https://accounts.google.com/o/oauth2/revoke?token={token}
 
 const _credFile = "./client_secret_000000000000-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.apps.googleusercontent.com.json" // input Edit 1.
 const _tokenFile = "./token.json"                                                                                 // output

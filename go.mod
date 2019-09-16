@@ -1,4 +1,4 @@
-module main
+module github.com/johndelavega/create-refresh-token
 
 go 1.12
 
